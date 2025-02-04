@@ -24,25 +24,8 @@ Check installation with:
 ```sh
 docker --version
 docker compose version
-2️⃣ Running the Application (Without Docker)
-If you want to run the app locally without Docker:
 
-Install MongoDB manually on your system.
-Create a .env file in the app/ folder and set the MongoDB URI:
-ini
-Copy
-Edit
-MONGO_URI=mongodb://localhost:27017/mydatabase
-PORT=3000
-Install dependencies and start the server:
-sh
-Copy
-Edit
-cd app
-npm install
-node server.js
-Visit: http://localhost:3000 to see the data.
-3️⃣ Running the Application with Docker Compose
+###**2️⃣Running the Application with Docker Compose**
 To run everything in Docker containers, follow these steps:
 
 Clone this repository:
