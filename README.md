@@ -45,7 +45,16 @@ docker-compose-project/
 
 ## Setup & Run With Docker  
 
-### Step 1: Build and Start Containers  
+### Step 1: Clone the Repository  
+
+First, clone this repository to your local machine:  
+
+```sh
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+```
+
+### Step 2: Build and Start Containers  
 
 Run the following command in the project root directory:  
 
@@ -53,7 +62,7 @@ Run the following command in the project root directory:
 docker-compose up -d --build
 ```
 
-### Step 2: Check Running Containers  
+### Step 3: Check Running Containers  
 
 ```sh
 docker ps
@@ -61,7 +70,7 @@ docker ps
 
 You should see `mongo-container` and `node_app-container` running.  
 
-### Step 3: Access the Application  
+### Step 4: Access the Application  
 
 Go to:  
 
@@ -86,5 +95,3 @@ To remove all containers, networks, and volumes:
 ```sh
 docker-compose down --volumes
 ```
-
----
