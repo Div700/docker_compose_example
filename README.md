@@ -24,3 +24,87 @@ Check installation with:
 ```sh
 docker --version
 docker compose version
+2️⃣ Running the Application (Without Docker)
+If you want to run the app locally without Docker:
+
+Install MongoDB manually on your system.
+Create a .env file in the app/ folder and set the MongoDB URI:
+ini
+Copy
+Edit
+MONGO_URI=mongodb://localhost:27017/mydatabase
+PORT=3000
+Install dependencies and start the server:
+sh
+Copy
+Edit
+cd app
+npm install
+node server.js
+Visit: http://localhost:3000 to see the data.
+3️⃣ Running the Application with Docker Compose
+To run everything in Docker containers, follow these steps:
+
+Clone this repository:
+sh
+Copy
+Edit
+git clone https://github.com/your-username/docker-compose-example.git
+cd docker-compose-example
+Start the containers:
+sh
+Copy
+Edit
+docker compose up --build
+Visit: http://localhost:3000 to see the stored MongoDB data.
+📦 Containers & Configuration
+1️⃣ node-app-container (Application)
+Runs the Node.js application.
+Handles frontend + business logic.
+Exposes port 3000.
+2️⃣ mongo-container (Database)
+Runs MongoDB on port 27017.
+Uses mongo-init.js to insert initial data.
+🔍 Verifying MongoDB Data
+To check if data is inserted into MongoDB:
+
+sh
+Copy
+Edit
+docker exec -it mongo-container mongosh
+Inside the shell:
+
+sh
+Copy
+Edit
+use mydatabase
+db.datas.find().pretty()
+🛑 Stopping & Removing Containers
+To stop all running containers:
+
+sh
+Copy
+Edit
+docker compose down
+To remove all containers and data:
+
+sh
+Copy
+Edit
+docker compose down -v
+🎯 Next Steps
+Modify mongo-init.js to insert different data.
+Convert into microservices for better architecture.
+Deploy to AWS, GCP, or Azure.
+📜 License
+This project is open-source and free to use.
+
+yaml
+Copy
+Edit
+
+---
+
+This is a **GitHub-friendly** README file with proper formatting, sections, and markdown syntax. Just copy and paste it into your `README.md` file. 🚀🔥  
+
+Let me know if you need any modifications! 😊
