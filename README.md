@@ -50,8 +50,8 @@ docker-compose-project/
 First, clone this repository to your local machine:  
 
 ```sh
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/Div700/docker_compose_example.git
+cd docker_compose_project
 ```
 
 ### Step 2: Build and Start Containers  
