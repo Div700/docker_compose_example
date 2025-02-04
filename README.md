@@ -43,38 +43,6 @@ docker-compose-project/
 
 ---
 
-## Setup & Run Without Docker  
-
-1. Install **Node.js** (if not already installed).  
-2. Install **MongoDB** and start the database.  
-3. Create a `.env` file inside the `app` folder:  
-
-    ```env
-    PORT=3000
-    MONGO_URI=mongodb://localhost:27017/mydatabase
-    ```
-
-4. Navigate to the `app` folder and install dependencies:  
-
-    ```sh
-    cd app
-    npm install
-    ```
-
-5. Start the Node.js application:  
-
-    ```sh
-    node server.js
-    ```
-
-6. Open your browser and go to:  
-
-    ```
-    http://localhost:3000/
-    ```
-
----
-
 ## Setup & Run With Docker  
 
 ### Step 1: Build and Start Containers  
